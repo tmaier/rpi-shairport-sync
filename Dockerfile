@@ -13,6 +13,7 @@ RUN apk add --no-cache \
   avahi-dev \
   build-base \
   curl \
+  dbus \
   libconfig-dev \
   libdaemon-dev \
   openssl-dev \
