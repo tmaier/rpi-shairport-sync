@@ -12,6 +12,12 @@ docker run -d \
   tmaier/rpi-shairport-sync
 ```
 
+## Build container
+
+```sh
+docker build -t tmaier/rpi-shairport-sync:latest .
+```
+
 ## References / Influences
 
 * Uses also alpine linux: https://github.com/patrickse/rpi-shairport-sync
