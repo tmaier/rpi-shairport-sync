@@ -52,6 +52,7 @@ RUN apk del \
         soxr-dev
 
 COPY start.sh /start
+RUN chmod +x /start
 
 ENV AIRPLAY_NAME Docker
 
