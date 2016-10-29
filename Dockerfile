@@ -11,6 +11,7 @@ RUN apk add --no-cache \
   autoconf \
   automake \
   avahi-dev \
+  curl \
   libconfig-dev \
   libdaemon-dev \
   openssl-dev \
@@ -20,7 +21,7 @@ RUN apk add --no-cache \
 
 ARG SHAIRPORT_VERSION=2.8.6
 
-RUN wget https://github.com/mikebrady/shairport-sync/archive/$SHAIRPORT_VERSION.tar.gz -P /tmp \
+RUN curl -Lo /tmp/$SHAIRPORT_VERSION.tar.gz https://github.com/mikebrady/shairport-sync/archive/$SHAIRPORT_VERSION.tar.gz \
       && tar -xzf /tmp/$SHAIRPORT_VERSION.tar.gz -C /tmp \
       && rm /tmp/$SHAIRPORT_VERSION.tar.gz \
       && cd /tmp/shairport-sync-$SHAIRPORT_VERSION \
