@@ -11,6 +11,7 @@ RUN apk add --no-cache \
   autoconf \
   automake \
   avahi-dev \
+  build-base \
   curl \
   libconfig-dev \
   libdaemon-dev \
