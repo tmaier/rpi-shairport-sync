@@ -50,6 +50,9 @@ RUN apk del \
         openssl-dev \
         popt-dev \
         soxr-dev
-  
-CMD shairport-sync -v -a $name
 
+COPY start.sh /start
+
+ENV AIRPLAY_NAME Docker
+
+ENTRYPOINT [ "/start" ]
